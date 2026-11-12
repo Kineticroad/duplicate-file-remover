@@ -466,7 +466,10 @@ class DuplicateScanner {
       _log(s.logCompare(other.path), LogLevel.compare);
       if (other.size != target.size) {
         _log(
-          s.logSizeDiffers(formatBytes(other.size), formatBytes(target.size)),
+          s.logSizeDiffers(
+            formatExactBytes(other.size),
+            formatExactBytes(target.size),
+          ),
           LogLevel.different,
         );
         continue;
@@ -566,4 +569,16 @@ String formatBytes(int bytes) {
     unit++;
   }
   return unit == 0 ? '$bytes B' : '${value.toStringAsFixed(1)} ${units[unit]}';
+}
+
+/// Exact byte count with thousands separators, e.g. `1,153,024 B`.
+/// Used where rounded sizes could look identical.
+String formatExactBytes(int bytes) {
+  final digits = bytes.abs().toString();
+  final buf = StringBuffer(bytes < 0 ? '-' : '');
+  for (var i = 0; i < digits.length; i++) {
+    if (i > 0 && (digits.length - i) % 3 == 0) buf.write(',');
+    buf.write(digits[i]);
+  }
+  return '$buf B';
 }
