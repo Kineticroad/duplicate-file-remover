@@ -10,6 +10,14 @@ Android 기기에서 중복 파일을 찾아 정리하는 앱입니다. 폴더�
 
 ---
 
+## 스크린샷
+
+<p>
+  <img src="docs/screenshots/review.ko.001.png" width="240" alt="폴더 선택 화면: 판정 기준(이름/내용/사진)과 삭제 모드(수동/자동) 선택">
+  <img src="docs/screenshots/review.ko.002.png" width="240" alt="탐색 시작 확인: 선택한 폴더와 판정 기준 안내">
+  <img src="docs/screenshots/review.ko.003.png" width="240" alt="진행 화면: 탐색 결과 통계와 비교 과정 로그">
+</p>
+
 ## 주요 기능
 
 - **폴더 단위 재귀 탐색**: 선택한 폴더 아래의 모든 하위 폴더를 끝까지 탐색합니다.
@@ -119,6 +127,14 @@ An Android app that finds and cleans up duplicate files on your device. Pick a f
 > [!WARNING]
 > This app **deletes files** on your device. Always back up important files (photos, videos, documents, etc.) before use.
 > This software is provided **"AS IS"**, without warranty of any kind. The developer is not responsible for any loss of or damage to files caused by using this app.
+
+### Screenshots
+
+<p>
+  <img src="docs/screenshots/review.en.001.png" width="240" alt="Folder picker with match mode (name/content/photo) and delete mode (manual/auto)">
+  <img src="docs/screenshots/review.en.002.png" width="240" alt="Scan confirmation showing the selected folder and match mode">
+  <img src="docs/screenshots/review.en.003.png" width="240" alt="Progress screen with scan statistics and comparison log">
+</p>
 
 ### Features
 
